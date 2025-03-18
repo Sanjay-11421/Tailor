@@ -62,6 +62,18 @@ CREATE TABLE IF NOT EXISTS `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
+-- Table structure for table `boutique`
+
+CREATE TABLE IF NOT EXISTS `boutique` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `category` VARCHAR(100) DEFAULT NULL,
+  `price` DECIMAL(10,2) DEFAULT NULL,
+  `description` TEXT DEFAULT NULL,
+  `stock` INT(11) NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `documents`
